@@ -21,12 +21,10 @@ def char_count(text):
     for w in words:
         lowered = w.lower()
         for c in lowered:
-            if c is counts[c]:
+            if c in counts:
                 counts[c] += 1
             else:
-                counts[c] = 1
-    for value in counts:
-        print(value)
-    #return counts
+                counts[c] = 1               
+    return counts
 
 main()
